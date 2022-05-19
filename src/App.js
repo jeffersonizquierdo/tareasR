@@ -2,7 +2,9 @@ import React from 'react';
 import logo from './logo.svg';
 import todos from './todos.json'
 import { useState } from 'react';
-import { Contador } from './components/Ui/Contador/Contador';
+import { Route, Routes } from 'react-router-dom';
+import { HeaderContador } from './components/Pages/headerContador/HeaderContador';
+
 
 
 function App() {
@@ -25,18 +27,13 @@ function App() {
   });
 
   return (
-    <div className="App">
-
-      <nav className='Head' >
-        <img src={logo} className="logo" alt="logo" />
-      </nav>
-
-      <div>Hola {getNoombreCompleto()}</div>
-      <div>esta es mi lista</div>
-
-      <Contador/>
-
-    </div>
+    <> 
+      <Routes>
+        <Route path='/' element={<HeaderContador></HeaderContador> } />
+      </Routes>
+    
+    
+    </>
   );
 }
 
