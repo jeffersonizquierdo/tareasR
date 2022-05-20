@@ -1,35 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import todos from './todos.json'
-import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { HeaderContador } from './components/Pages/headerContador/HeaderContador';
 
 
-
 function App() {
+//const [persona, setPersona] = useState({
+//nombre: 'David',
+//apellido: 'Escobar'
+//});
+//const [todos1] = useState(todos)
+//const getNoombreCompleto = () => persona.nombre + ' ' + persona.apellido;
+//const mostrarTareas = () => todos.forEach(element => {
 
-  const [persona, setPersona] = useState({
-    nombre: 'David',
-    apellido: 'Escobar'
-  });
-  const [todos1] = useState(todos)
-  const getNoombreCompleto = () => persona.nombre + ' ' + persona.apellido;
-  const mostrarTareas = () => todos.forEach(element => {
+//});
 
-    <>
-      <h1>
-        hola mundo
-      </h1>
-    </>
-    
-    
-  });
+  
 
   return (
-    <> 
+    <>
+    <h1 className='menu'>MENU</h1>
+    <h2 className='tittle'>Contador</h2>
       <Routes>
-        <Route path='/' element={<HeaderContador></HeaderContador> } />
+        <Route path='/' element={ <HeaderContador/>}> </Route>
       </Routes>
     </>
   );
