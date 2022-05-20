@@ -31,8 +31,6 @@ function App() {
       <Routes>
         <Route path='/' element={<HeaderContador></HeaderContador> } />
       </Routes>
-    
-    
     </>
   );
 }

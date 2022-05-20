@@ -11,10 +11,6 @@ body {
   
 }
 
-.Head{
-  text-align: center;
-}
-
 .logo{
 
   animation: app-logo-spin infinite 20s linear;
