@@ -3,6 +3,7 @@ import todos from './todos.json'
 import { Route, Routes } from 'react-router-dom';
 import { HeaderContador } from './components/Pages/headerContador/HeaderContador';
 import { MenuNavigationF } from './components/Pages/MenuNavigationF/MenuNavigationF';
+import { ModeDarkF } from './components/Pages/ModeDarkF/ModeDarkF';
 
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
       <Routes>
         <Route path='/' element={ <HeaderContador/>}> </Route>
       </Routes>
+
+      <ModeDarkF></ModeDarkF>
     </>
   );
 }
