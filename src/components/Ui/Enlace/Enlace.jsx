@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const Enlace = (text, style, direction) => {
+export const Enlace = () => {
   return (
-    <div className={style} > <a href={direction}>{text}</a> </div>
+    <div> 
+      <a href='/' >Enlace</a> 
+    </div>
   )
 }

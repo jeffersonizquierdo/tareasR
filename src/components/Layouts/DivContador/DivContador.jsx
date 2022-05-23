@@ -9,12 +9,28 @@ export const DivContador = () => {
   const restar = () => setcontador(contador -1)
   const reset = () => setcontador(0)
 
+  function colorContador (){
+    
+    if (contador == 0){
+
+      console.log("ceroooo")
+    } else if (contador > 0 ){
+
+      console.log("mayor cerooo");
+    } else if (contador < 0 ){
+
+      console.log("menor a cero");
+    }
+  }
+
+  
+
   return (
     <>
       <div className='cont'>
         <div className='count' ><Contador styles={"counter"} textContent={contador}/></div>
         <nav className='btns' > 
-          <Boton styles={"btn1"} event={sumar} textButtom={"sumar"}/>
+          <Boton styles={"btn1"} event={sumar}  textButtom={"sumar"}/>
           <Boton styles={"btn2"} event={reset} textButtom="reset"/>
           <Boton styles={"btn3"} event={restar} textButtom="restar"/>
         </nav>
