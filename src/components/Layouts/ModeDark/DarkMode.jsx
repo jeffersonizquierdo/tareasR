@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 export const DarkMode = () => {
 
   const [tittle, setTittle] = useState("off")
-  const [modeDark, setMode] = useState(true)
+  const [modeDark, setMode] = useState(false)
 
   const backgorund =  () =>{
 

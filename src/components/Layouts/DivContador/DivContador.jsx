@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import { ModeDarkF } from '../../Pages/ModeDarkF/ModeDarkF';
 import { Boton } from '../../Ui/Buttom/Boton';
 import { Contador } from '../../Ui/Contador/Contador';
 import { Logo } from '../../Ui/Logo/Logo';
@@ -28,13 +29,15 @@ export const DivContador = () => {
 
   return (
     <>
+      <h2 className='tittle'>Contador</h2>
       <div className='cont'>
         <div className='count' ><Contador styles={"counter"} textContent={contador}/></div>
         <Logo id="image" />
         <nav className='btns'>
-          <Boton styles={"btn1"} event={sumar}  textButtom={"sumar"}/>
+        <Boton styles={"btn3"} event={restar} textButtom="restar"/>
           <Boton styles={"btn2"} event={reset} textButtom="reset"/>
-          <Boton styles={"btn3"} event={restar} textButtom="restar"/>
+          <Boton styles={"btn1"} event={sumar}  textButtom={"sumar"}/>
+          <ModeDarkF/>
         </nav>
       </div>
       

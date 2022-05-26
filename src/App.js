@@ -1,9 +1,9 @@
 import React from 'react';
-import todos from './todos.json'
 import { Route, Routes } from 'react-router-dom';
 import { HeaderContador } from './components/Pages/headerContador/HeaderContador';
 import { MenuNavigationF } from './components/Pages/MenuNavigationF/MenuNavigationF';
-import { ModeDarkF } from './components/Pages/ModeDarkF/ModeDarkF';
+import { RickAndMortyF } from './components/Pages/RickAndMortyF/RickAndMortyF';
+
 
 
 function App() {
@@ -17,12 +17,11 @@ function App() {
         </nav>
         <MenuNavigationF></MenuNavigationF>
       </div>
-      <h2 className='tittle'>Contador</h2>
       <Routes>
         <Route path='/' element={ <HeaderContador/>}> </Route>
+        <Route path='/contador'  element={<HeaderContador/>}/>
       </Routes>
-
-      <ModeDarkF></ModeDarkF>
+      <RickAndMortyF/>
     </>
   );
 }

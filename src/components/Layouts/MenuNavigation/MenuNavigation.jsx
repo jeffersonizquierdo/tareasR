@@ -1,14 +1,12 @@
 import React from 'react'
-import { Enlace } from '../../Ui/Enlace/Enlace'
+import { Link } from 'react-router-dom'
 
 export const MenuNavigation = () => {
   return (
 
     <div>
-      <Enlace />
-      <Enlace />
-      <Enlace />
-      <Enlace />
+      <Link className='' to={"/contador"}> Counter </Link>
+      <Link className='' to={"/rickAndMorty"}> Rick And Morty </Link>
     </div>
   )
 }
