@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { Mailer } from './components/Layouts/Mailer/Mailer';
 import { HeaderContador } from './components/Pages/headerContador/HeaderContador';
 import { MenuNavigationF } from './components/Pages/MenuNavigationF/MenuNavigationF';
 import { RickAndMortyF } from './components/Pages/RickAndMortyF/RickAndMortyF';
@@ -20,8 +21,10 @@ function App() {
       <Routes>
         <Route path='/' element={ <HeaderContador/>}> </Route>
         <Route path='/contador'  element={<HeaderContador/>}/>
+        <Route path='/RickAndMorty' element={<RickAndMortyF/>}/>
+        <Route path='Mailer' element={<Mailer></Mailer>}/>
       </Routes>
-      <RickAndMortyF/>
+      
     </>
   );
 }

@@ -1,11 +1,10 @@
 import React from 'react'
 
-export const Input = ({labelText, placeh}) => {
+export const Input = ({labelText, placeh, idInput}) => {
   return (
     <div>
-      <h2>Hollaaaa</h2>
       <label className='placeh' htmlFor="">{labelText}</label>
-      <input id='idRick' placeholder={placeh} ></input>
+      <input id={idInput} placeholder={placeh} ></input>
     </div>
     
   )

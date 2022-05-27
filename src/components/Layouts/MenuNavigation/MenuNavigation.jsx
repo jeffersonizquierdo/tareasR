@@ -7,6 +7,7 @@ export const MenuNavigation = () => {
     <div>
       <Link className='' to={"/contador"}> Counter </Link>
       <Link className='' to={"/rickAndMorty"}> Rick And Morty </Link>
+      <Link className='' to={"/Mailer"}>Mailer</Link>
     </div>
   )
 }
