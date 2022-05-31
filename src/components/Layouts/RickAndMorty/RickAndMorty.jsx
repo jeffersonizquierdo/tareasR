@@ -5,75 +5,85 @@ import { Card } from '../Card/Card';
 
 export const RickAndMorty = () => {
 
-  const input =document.getElementById("idRick") 
-  const inputSearch =document.getElementById("")
+  const URL = "https://rickandmortyapi.com/api/character"
   const card = document.getElementById("card")
-  const url = "https://rickandmortyapi.com/api/character/?name="
+  const input = document.getElementById("idRick")
+
+  window.addEventListener("load", getCharacters)
+
   const [mode, setMode] = useState(false)
 
-  function run (){
+  const change = () =>{
 
-    const tecla = event.keyCode;
-
-    if (tecla == 13){
-      change()
-    }
-
-  }
-
-  const change =() => {
     setMode(!mode)
   }
-
-  useEffect (() => {
-
-    if (mode){
+  
+  useEffect(() => {
+   
+    if(mode){
       filterCharacter(document.getElementById("idRick").value)
+    }else{
+
     }
   }, [mode])
 
-  function filterCharacter(searching) {
 
-    fetch(url+searching)
-    .then (response => response.json())
+  function getCharacters(){   
+
+    fetch(URL)
+    .then(response => response.json())
     .then(data => {
-  
-        data.results.forEach(element=> {
-            createCards(element.name, element.image, element.name)
-            console.log(element.name);
-        })
-      }) 
-  }
+        console.log(data);
+        data.results.map(element => {
+            console.log(element);
+            createCard(element.name, element.image, element.name)
+        });
+    });
+}
 
-
-  function createCards(name, image, alt) {
-
+  function createCard (name, image, alt){
     const card = document.getElementById("card")
     const imgCard = document.createElement("img")
     const nameCard = document.createElement("h2")
     const container = document.createElement("div")
     container.classList.add("container")
     nameCard.textContent = name
-    imgCard.setAttribute("src", image)
-    imgCard.setAttribute("atl", alt)
+    imgCard.setAttribute("src",image)
+    imgCard.setAttribute("atl",alt)
     container.appendChild(nameCard)
     container.appendChild(imgCard)
     card.appendChild(container)
+
   }
 
-  function cleanPage (){
+  function cleanPage(){
+    const input = document.getElementById("idRick")
+    while (card.lastChild){
+      card.removeChild(card.lastChild)
+    }filterCharacter(input.value)
+  }
 
-    while (card.lastChild) {
-        card.removeChild(card.lastChild)
-    }
-    filterCharacter(inputSearch.value)
-}
+  function filterCharacter(searching){
+
+    document.getElementById("card").innerHTML=""
+    const URLSearchCharacter = "https://rickandmortyapi.com/api/character/?name="
+    fetch(URLSearchCharacter+searching)
+    .then (response => response.json())
+    .then(data => {
+
+        data.results.map(element=> {
+            createCard(element.name, element.image, element.name)
+            console.log(element.name);
+        })
+    }) 
+
+  }
 
   return (
-    <div>
-      <Input id={"idRick"} placeh={"Buscar"} />
+    <div className='div'>
+      <input id='idRick'  onKeyUp={change} placeholder="Buscar"/>
 
-      <Card id={"card"} />
+      <Card id='card' style={"card"} ></Card>
 
     </div>
   )

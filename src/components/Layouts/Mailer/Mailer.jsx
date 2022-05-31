@@ -1,19 +1,12 @@
 import React from 'react'
-import emails from 'emailjs-com';
 
 export const Mailer = () => {
 
-
-  const sendEmail = (event) => {
-    event.preventDevault();
-
-    emails.sendForm('service_270jbap', 'template_jiwbexu', event.target, )
-
-  }
   return (
     <div className='form_div'>
-      <h1> Contacts US </h1>
-      <form  className='form' onSubmit={sendEmail}>
+     
+     <h1> Contacts US </h1>
+      <form  className='form'>
         <label htmlFor="">Name</label>
         <input type="text" name='userName' />
         <hr></hr>

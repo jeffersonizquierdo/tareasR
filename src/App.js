@@ -9,6 +9,10 @@ import { RickAndMortyF } from './components/Pages/RickAndMortyF/RickAndMortyF';
 
 function App() {
 
+  const sendEmail = (event) => {
+    event.preventDevault();
+  }
+
   return (
     <>
       
