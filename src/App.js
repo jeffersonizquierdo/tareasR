@@ -27,6 +27,7 @@ function App() {
         <Route path='/contador'  element={<HeaderContador/>}/>
         <Route path='/RickAndMorty' element={<RickAndMortyF/>}/>
         <Route path='Mailer' element={<Mailer></Mailer>}/>
+        <Route path='apiTenor' element={<apiTenorF/>} ></Route>
       </Routes>
       
     </>
