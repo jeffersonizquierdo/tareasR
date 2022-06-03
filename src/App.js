@@ -1,9 +1,11 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Mailer } from './components/Layouts/Mailer/Mailer';
+import { ApiTenorF } from './components/Pages/ApiTenorF/ApiTenorF';
 import { HeaderContador } from './components/Pages/headerContador/HeaderContador';
 import { MenuNavigationF } from './components/Pages/MenuNavigationF/MenuNavigationF';
 import { RickAndMortyF } from './components/Pages/RickAndMortyF/RickAndMortyF';
+
 
 
 
@@ -27,7 +29,7 @@ function App() {
         <Route path='/contador'  element={<HeaderContador/>}/>
         <Route path='/RickAndMorty' element={<RickAndMortyF/>}/>
         <Route path='Mailer' element={<Mailer></Mailer>}/>
-        <Route path='apiTenor' element={<apiTenorF/>} ></Route>
+        <Route path='apiTenor' element={<ApiTenorF/>} ></Route>
       </Routes>
       
     </>
