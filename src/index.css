@@ -187,4 +187,17 @@ text-decoration: none;
   align-items: center;
   gap: 10px;
 }
+.container{
 
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+}
+
+
+.img-gif{
+
+  width: 400px;
+  height: 300px;
+  margin: 20px;
+}
